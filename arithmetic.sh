@@ -12,7 +12,7 @@ case $op in
 ;;
 '*')val=`echo $a \* $b |bc`
 ;;
-'/')val=$((a / b))
+'/')val=`echo "scale=2; $a / $b | bc`
 ;;
 esac
 echo "$val"
